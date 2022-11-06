@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TicTacToe Game</title>
+        <meta name="author" content="Odimayo Taiye Moses">
+        <meta name="description" content="Odimayo Taiye Tic Tac Toe Game">
+        <meta name="keywords" content="Odimayo, Taiye, Tic Tac Toe, Game">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='TicTacToe.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="TicTacToe.js"></script>
+    </head>
+    
+    <body>
+        <h1>Tic Tac Toe Game</h1>
+        <div id="levels" style="opacity: 0">
+            <input type="button" value="Easy" onclick=Easy()>
+            <input type="button" value="Hard" onclick=Hard()>
+            <input type="button" value="Expert" onclick=Expert()>
+            <input type="button" value="UnDefeated" onclick=Undefeated()>
+            <input type="button" value="Back" style="margin-left: 30%; width:40%; height: 8%; font-size:1.5em;" onclick=Back()>
+        </div>
+        <div id="select" style="opacity: 1">
+            <input type="button" value="Play Computer" onclick=Playcomputer()>
+            <input type="button" value="Two Players" onclick=Twoplayers()>
+        </div>
+        
+        <div id="display" style="opacity: 0">
+            <p style="font-family: monospace; font-size: 1.4em;">Player 1</p>
+            <div id='board'>
+                <div>
+                    <div id='11' onclick=Play("11") style="color: rgb(0,0,0)"></div>
+                    <div id='12' onclick=Play("12") style="color: rgb(0,0,0)"></div>
+                    <div id='13' onclick=Play("13") style="color: rgb(0,0,0)"></div>
+                </div>
+                <div>
+                    <div id='21' onclick=Play("21") style="color: rgb(0,0,0)"></div>
+                    <div id='22' onclick=Play("22") style="color: rgb(0,0,0)"></div>
+                    <div id='23' onclick=Play("23") style="color: rgb(0,0,0)"></div>
+                </div>
+                <div>
+                    <div id='31' onclick=Play("31") style="color: rgb(0,0,0)"></div>
+                    <div id='32' onclick=Play("32") style="color: rgb(0,0,0)"></div>
+                    <div id='33' onclick=Play("33") style="color: rgb(0,0,0)"></div>
+                </div>
+            </div>
+            
+            <p style="font-size: 1.4em;" id="play2">Player 2</p>
+
+        </div>
+        <div style="display: none; opacity: 0;" id="congrat">
+            <div id="p1wins" style="display: none">
+                <h2>
+                    Congrat
+                </h2>
+                <h3>
+                    Player 1 Win's
+                </h3>
+                
+                <input value="Play Again" type="button" onclick="PlayAgain();"/>
+            </div>
+            <div id="p2wins" style="display: none">
+                <h2>
+                    Congrat
+                </h2>
+                <h3>
+                    Player 2 Win's
+                </h3>
+                
+                <input value="Play Again" type="button" onclick="PlayAgain();"/>
+            </div>
+            <div id="draw" style="display: none">
+                <h2>
+                    Nice Game
+                </h2>
+                <h3>
+                    Unfortunately, It Ended In a draw
+                </h3>
+                
+                <input value="Play Again" type="button" onclick="PlayAgain();"/>
+            </div>
+            
+            <a href="mailto:odimayomoses@gmail.com" style="position: absolute; bottom: 10vh; right: 50px; color: rgb(255,0,0);"><i class="fa fa-envelope fa-3x"></i></a>
+            
+        </div>
+        
+    </body>
+</html>
